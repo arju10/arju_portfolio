@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Tech Innovator
+            Hi, I'm Arju
           </h1>
           <h2 className="text-2xl md:text-4xl font-semibold mb-8 text-foreground">
             Full Stack Developer • AI/ML Engineer
