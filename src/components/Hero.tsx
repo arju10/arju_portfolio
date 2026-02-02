@@ -23,7 +23,7 @@ const Hero = () => {
             Tech Innovator
           </h1>
           <h2 className="text-2xl md:text-4xl font-semibold mb-8 text-foreground">
-            Full Stack Developer • AI Engineer • Cybersecurity Expert • Data Engineer
+            Full Stack Developer • AI/ML Engineer
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Bridging the gap between cutting-edge technology and practical solutions. 
