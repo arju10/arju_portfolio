@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Brain, Shield, Database } from "lucide-react";
+import { Code, Brain } from "lucide-react";
 
 const About = () => {
   const expertise = [
@@ -11,20 +11,8 @@ const About = () => {
     },
     {
       icon: Brain,
-      title: "AI Engineering",
+      title: "AI/ML Engineering",
       description: "Developing intelligent systems using machine learning, deep learning, and natural language processing. Experience with TensorFlow, PyTorch, and LLMs.",
-      color: "text-cyber-purple"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Implementing robust security measures and conducting threat assessments. Specialized in penetration testing, vulnerability analysis, and secure coding practices.",
-      color: "text-cyber-blue"
-    },
-    {
-      icon: Database,
-      title: "Data Engineering",
-      description: "Designing and maintaining data pipelines, warehouses, and analytics platforms. Proficient in SQL, NoSQL, ETL processes, and big data technologies.",
       color: "text-cyber-purple"
     }
   ];
