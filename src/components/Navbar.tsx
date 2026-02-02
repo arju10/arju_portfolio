@@ -33,7 +33,7 @@ const Navbar = () => {
             onClick={(e) => { e.preventDefault(); handleNavClick('#hero'); }}
             className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent"
           >
-            Portfolio
+            Arju
           </a>
 
           {/* Desktop Navigation */}
