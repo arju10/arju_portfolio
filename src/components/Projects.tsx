@@ -1,9 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
   const projects = [
     {
       title: "AI-Powered Threat Detection System",
@@ -74,7 +76,7 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
             <Card 
               key={index}
               className="bg-gradient-card border-tech-border hover:shadow-hover transition-all duration-300 group flex flex-col"
@@ -139,7 +141,30 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {projects.length > 3 && (
+          <div className="mt-12 text-center">
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-5 h-5 mr-2" />
+                  Show Less
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-5 h-5 mr-2" />
+                  Show More Projects
+                </>
+              )}
+            </Button>
+          </div>
+        )}
+
+        <div className="mt-8 text-center">
           <Button 
             size="lg"
             variant="outline"
