@@ -144,9 +144,33 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
             A showcase of innovative solutions that demonstrate the intersection of security, intelligence, and scalability.
           </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white transition-all duration-300"
+              asChild
+            >
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5 mr-2" />
+                AI/ML Projects
+              </a>
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-cyber-purple text-cyber-purple hover:bg-cyber-purple hover:text-white transition-all duration-300"
+              asChild
+            >
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5 mr-2" />
+                Full Stack Projects
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* AI Projects Section */}
