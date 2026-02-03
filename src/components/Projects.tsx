@@ -219,16 +219,27 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="text-center">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button 
             size="lg"
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white transition-all duration-300"
             asChild
           >
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
-              View All Projects on GitHub
+              View AI/ML Projects on GitHub
+            </a>
+          </Button>
+          <Button 
+            size="lg"
+            variant="outline"
+            className="border-cyber-purple text-cyber-purple hover:bg-cyber-purple hover:text-white transition-all duration-300"
+            asChild
+          >
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Github className="w-5 h-5 mr-2" />
+              View Full Stack Projects on GitHub
             </a>
           </Button>
         </div>

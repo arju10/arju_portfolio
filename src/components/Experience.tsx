@@ -1,8 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const Experience = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const experiences = [
     {
       title: "Senior Full Stack Developer",
@@ -42,8 +46,36 @@ const Experience = () => {
         "Mentored junior developers and conducted code reviews"
       ],
       technologies: ["React", "Vue.js", "Node.js", "MongoDB", "Docker", "Redis"]
+    },
+    {
+      title: "Junior Developer",
+      company: "WebSolutions Ltd",
+      location: "Remote",
+      period: "2016 - 2018",
+      description: "Started career building responsive web applications and learning modern development practices.",
+      achievements: [
+        "Contributed to 10+ client projects",
+        "Learned agile methodologies and CI/CD practices",
+        "Built reusable component libraries"
+      ],
+      technologies: ["JavaScript", "React", "CSS", "Git", "REST APIs"]
+    },
+    {
+      title: "Intern Developer",
+      company: "TechStart Academy",
+      location: "Boston, MA",
+      period: "2015 - 2016",
+      description: "Gained foundational experience in software development through hands-on projects and mentorship.",
+      achievements: [
+        "Completed 3-month intensive training program",
+        "Built first production application",
+        "Collaborated with senior developers on real projects"
+      ],
+      technologies: ["HTML", "CSS", "JavaScript", "Python", "SQL"]
     }
   ];
+
+  const displayedExperiences = showAll ? experiences : experiences.slice(0, 3);
 
   return (
     <section id="experience" className="py-20 px-4">
@@ -62,7 +94,7 @@ const Experience = () => {
           <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block" />
 
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
+            {displayedExperiences.map((exp, index) => (
               <div 
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 ${
@@ -129,6 +161,29 @@ const Experience = () => {
             ))}
           </div>
         </div>
+
+        {experiences.length > 3 && (
+          <div className="mt-12 text-center">
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-5 h-5 mr-2" />
+                  Show Less Experience
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-5 h-5 mr-2" />
+                  Show More Experience
+                </>
+              )}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
