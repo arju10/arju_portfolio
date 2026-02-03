@@ -34,19 +34,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@example.com",
-      link: "mailto:contact@example.com"
+      value: "arju@example.com",
+      link: "mailto:arju@example.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+880 1XXX-XXXXXX",
+      link: "tel:+8801XXXXXXXXX"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Remote / Available Worldwide",
+      value: "Dhaka, Bangladesh",
       link: null
     }
   ];

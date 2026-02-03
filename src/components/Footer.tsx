@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              Tech Innovator
+              Arju
             </h3>
             <p className="text-muted-foreground">
               Building the future with secure, intelligent solutions
@@ -44,7 +44,7 @@ const Footer = () => {
         
         <div className="mt-8 pt-8 border-t border-tech-border text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} Made with <Heart className="w-4 h-4 text-red-500" /> by Tech Innovator
+            © {currentYear} Made with <Heart className="w-4 h-4 text-red-500" /> by Arju
           </p>
         </div>
       </div>
