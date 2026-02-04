@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Projects = () => {
   const [showAllAI, setShowAllAI] = useState(false);
@@ -13,6 +14,7 @@ const Projects = () => {
       title: "AI-Powered Threat Detection System",
       description: "Machine learning system that analyzes network traffic patterns to identify potential security threats in real-time. Reduced false positives by 85% compared to traditional methods.",
       technologies: ["Python", "TensorFlow", "Elasticsearch", "Docker", "AWS"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -20,6 +22,7 @@ const Projects = () => {
       title: "Intelligent Code Review Assistant",
       description: "AI-powered tool that performs automated code reviews, detects vulnerabilities, and suggests optimizations. Integrated with popular git platforms and CI/CD pipelines.",
       technologies: ["Node.js", "OpenAI", "React", "TypeScript", "MongoDB"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -27,6 +30,7 @@ const Projects = () => {
       title: "Natural Language Query Engine",
       description: "Converts natural language questions into SQL queries, enabling non-technical users to interact with databases using plain English.",
       technologies: ["Python", "LangChain", "GPT-4", "PostgreSQL", "FastAPI"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -34,6 +38,7 @@ const Projects = () => {
       title: "Automated Penetration Testing Suite",
       description: "Comprehensive security testing framework that automatically discovers vulnerabilities and generates detailed reports with remediation recommendations.",
       technologies: ["Python", "Nmap", "Metasploit", "Docker", "FastAPI"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -41,6 +46,7 @@ const Projects = () => {
       title: "AI Image Recognition System",
       description: "Deep learning model for real-time object detection and classification with 98% accuracy on custom datasets.",
       technologies: ["Python", "PyTorch", "OpenCV", "CUDA", "Docker"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     }
@@ -51,6 +57,7 @@ const Projects = () => {
       title: "Distributed Data Pipeline Platform",
       description: "Scalable data processing platform handling 10TB+ daily data ingestion with real-time analytics and automated quality checks. Built for enterprise-level financial services.",
       technologies: ["Apache Spark", "Kafka", "PostgreSQL", "Kubernetes", "Python"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -58,6 +65,7 @@ const Projects = () => {
       title: "Real-time Analytics Dashboard",
       description: "Interactive dashboard processing millions of events per second with advanced visualizations and predictive analytics. Used by major e-commerce platforms.",
       technologies: ["React", "D3.js", "WebSocket", "Redis", "PostgreSQL"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -65,6 +73,7 @@ const Projects = () => {
       title: "Zero-Trust Network Architecture",
       description: "Complete network security overhaul implementing zero-trust principles with micro-segmentation, continuous monitoring, and adaptive access controls.",
       technologies: ["Go", "Istio", "Prometheus", "Grafana", "Terraform"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -72,6 +81,7 @@ const Projects = () => {
       title: "E-commerce Microservices Platform",
       description: "Fully scalable e-commerce backend with payment processing, inventory management, and order fulfillment microservices.",
       technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -79,24 +89,37 @@ const Projects = () => {
       title: "Task Management System",
       description: "Collaborative project management tool with real-time updates, kanban boards, and team analytics.",
       technologies: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Zustand"],
+      images: ["/placeholder.svg"],
       demoUrl: "#",
       githubUrl: "#"
     }
   ];
 
   const ProjectCard = ({ project }: { project: typeof aiProjects[0] }) => (
-    <Card className="bg-gradient-card border-tech-border hover:shadow-hover transition-all duration-300 group flex flex-col">
-      <CardHeader>
+    <Card className="bg-gradient-card border-tech-border hover:shadow-hover transition-all duration-300 group flex flex-col overflow-hidden">
+      {/* Project Image */}
+      <div className="relative overflow-hidden">
+        <AspectRatio ratio={16 / 9}>
+          <img 
+            src={project.images[0]} 
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </AspectRatio>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
+      
+      <CardHeader className="pb-3">
         <CardTitle className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
           {project.title}
         </CardTitle>
-        <CardDescription className="text-muted-foreground leading-relaxed">
+        <CardDescription className="text-muted-foreground leading-relaxed text-sm">
           {project.description}
         </CardDescription>
       </CardHeader>
       
-      <CardContent className="flex-1 flex flex-col justify-between">
-        <div className="mb-6">
+      <CardContent className="flex-1 flex flex-col justify-between pt-0">
+        <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, techIndex) => (
               <Badge 
