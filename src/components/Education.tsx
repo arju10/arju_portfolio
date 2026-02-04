@@ -16,6 +16,34 @@ const Education = () => {
       period: "Sep '24",
       status: "Completed",
       minor: "Big Data and High-Performance Computing"
+    },
+    {
+      degree: "HSC (Higher Secondary Certificate)",
+      institution: "Sample College, Dhaka",
+      period: "2018",
+      status: "Completed",
+      minor: null
+    },
+    {
+      degree: "SSC (Secondary School Certificate)",
+      institution: "Sample High School, Sirajgonj",
+      period: "2016",
+      status: "Completed",
+      minor: null
+    },
+    {
+      degree: "JSC (Junior School Certificate)",
+      institution: "Sample High School, Sirajgonj",
+      period: "2013",
+      status: "Completed",
+      minor: null
+    },
+    {
+      degree: "PSC (Primary School Certificate)",
+      institution: "Sample Primary School, Shahjadpur",
+      period: "2010",
+      status: "Completed",
+      minor: null
     }
   ];
 
