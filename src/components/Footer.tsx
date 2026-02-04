@@ -18,7 +18,7 @@ const Footer = () => {
           
           <div className="flex items-center space-x-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/arju10" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow"
@@ -26,7 +26,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/arju10" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow"

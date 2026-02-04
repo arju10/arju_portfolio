@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Hi, I'm Arju
+            Hi, I'm Mst. Tahmina Jerin Arju
           </h1>
           <h2 className="text-2xl md:text-4xl font-semibold mb-8 text-foreground">
             Full Stack Developer • AI/ML Engineer
@@ -52,7 +52,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-16">
             <a 
-              href="https://github.com" 
+              href="https://github.com/arju10" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary hover:shadow-glow transition-all duration-300 group"
@@ -60,7 +60,7 @@ const Hero = () => {
               <Github className="w-6 h-6 group-hover:text-primary-foreground" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/arju10" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary hover:shadow-glow transition-all duration-300 group"
@@ -68,8 +68,9 @@ const Hero = () => {
               <Linkedin className="w-6 h-6 group-hover:text-primary-foreground" />
             </a>
             <a 
-              href="mailto:contact@example.com"
+              href="mailto:mst.tahminajerinarju@gmail.com"
               className="p-3 rounded-full bg-card hover:bg-primary hover:shadow-glow transition-all duration-300 group"
+              target="_blank"
             >
               <Mail className="w-6 h-6 group-hover:text-primary-foreground" />
             </a>

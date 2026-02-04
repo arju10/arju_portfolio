@@ -46,7 +46,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      value: "Shahjadpur, Sirajgonj",
+      value: "Shahjadpur, Sirajgonj, BD",
       link: null
     },
     {
@@ -150,6 +150,8 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="bg-muted border-tech-border focus:border-primary"
+                        
+                        
                       />
                     </div>
                   </div>

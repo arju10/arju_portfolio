@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const handleDownloadResume = () => {
     // Opens resume in new tab - replace with your actual resume URL
-    window.open('/resume.pdf', '_blank');
+    window.open('https://drive.google.com/file/d/1t9ObrZuTLLOUw4jF8k-qIdDI3D23ubw_/view?usp=sharing', '_blank');
   };
 
   return (

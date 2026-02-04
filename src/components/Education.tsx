@@ -6,41 +6,41 @@ const Education = () => {
     {
       degree: "MSc. in Computer Science",
       institution: "Independent University, Bangladesh",
-      period: "Aug '25",
-      status: "Ongoing",
+      period: "Sep 2024 - Aug 2025",
+      status: "Completed",
       minor: null
     },
     {
       degree: "BBA in MIS",
       institution: "Independent University, Bangladesh",
-      period: "Sep '24",
+      period: "May 2019 - Sep 2024",
       status: "Completed",
       minor: "Big Data and High-Performance Computing"
     },
     {
       degree: "HSC (Higher Secondary Certificate)",
-      institution: "Sample College, Dhaka",
+      institution: "Alhera Academy School and College",
       period: "2018",
       status: "Completed",
       minor: null
     },
     {
       degree: "SSC (Secondary School Certificate)",
-      institution: "Sample High School, Sirajgonj",
+      institution: "Alhera Academy School and College",
       period: "2016",
       status: "Completed",
       minor: null
     },
     {
       degree: "JSC (Junior School Certificate)",
-      institution: "Sample High School, Sirajgonj",
+      institution: "Alhera Academy School and College",
       period: "2013",
       status: "Completed",
       minor: null
     },
     {
       degree: "PSC (Primary School Certificate)",
-      institution: "Sample Primary School, Shahjadpur",
+      institution: "Alhera Academe School and College",
       period: "2010",
       status: "Completed",
       minor: null
